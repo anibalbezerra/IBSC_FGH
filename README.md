@@ -56,11 +56,11 @@ The potential profile is defined using the numpy's **argwhere** function. Since 
     
 *6) Defining electric field Stark Effect.*
 
-The doped layers define an intrinsic electric field that bends the intrinsec layer due to the so called Stark Effect. Such a bend is responsible for the drift dynamics of the carriers. To mimic such effect we employied an constant electric field and summed its contributions to the potential profile.
+The doped layers define an intrinsic electric field that bends the intrinsic layer due to the so-called Stark Effect. Such a bend is responsible for the drift dynamics of the carriers. To mimic such an effect we employed a constant electric field and summed its contributions to the potential profile.
 
 *7) Diagonalization.*
 
-After properly defining the potential profile, we add it to the diagonal of the Hamiltonian matrix and perform the diagonalization. Such a procedure is done separately for the valence and conduction bands. Since the valence band have an inverted profile in comparison to the conduction one, the code interpret it as a barrier instead of a quantum well. To solve it we changed its signal and added the quantum well band gap. After performing the diagonalization we revert the changes.
+After properly defining the potential profile, we add it to the diagonal of the Hamiltonian matrix and perform the diagonalization. Such a procedure is done separately for the valence and conduction bands. Since the valence band has an inverted profile in comparison to the conduction one, the code interprets it as a barrier instead of a quantum well. To solve it we changed its signal and added the quantum well bandgap. After performing the diagonalization we revert the changes.
 
-The diaginalization is done using the linear algebra library of numpy, by means of the function *linalg.eig*. It returns both the eigenvalues and the eiganvectors.
+The diagonalization is done using the linear algebra library of numpy, through the function *linalg.eig*. It returns both the eigenvalues and the eigenvectors.
 
