@@ -64,3 +64,14 @@ After properly defining the potential profile, we add it to the diagonal of the 
 
 The diagonalization is done using the linear algebra library of numpy, through the function *linalg.eig*. It returns both the eigenvalues and the eigenvectors.
 
+*8) Evaluating Absorption.*
+
+To evaluate the absorption spectra we employed the Fermi golden rule, taking the scalar product between the valence and conduction band states - as the oscillator strength. We start by creating a matrix with the energy difference between the states **Ev**. Together with the oscillator strength **f** times the Heaviside function the absorption **alpha** is summed over the states.
+
+*9) Black body radiation for Sunlight.*
+
+To compare the absorption spectra of the solar cell, we also evaluated the black-body radiation spectra to simulate the solar irradiance **I**. We use the Fermi-Dirac distribution with a temperature of 5775K.
+
+*10) Plotting results.*
+
+Finally, we plotted all the results, starting with the potential profiles together with the square modulus of the eigenfunctions, shifted according to the eigenergies. After we plotted the absorption and the solar irradiance.
