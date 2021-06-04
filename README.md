@@ -40,6 +40,10 @@ To evaluate the absorption the energy grid was also discretized and has a total 
 
 The evaluation of the oscillator strength, used with the absorption, requires a Heaviside step function. Such a function is defined inline as **Heaviside**, using the *lambda* syntax. 
 
+To define the kinetic energy operator we need a matrix of indexes to be used with the cosine function. Such a matrix depends only of the number of point in the grid and can be reused for several potentials, if the grid doesn't change. Two inline neested for loops are used to construct the indexes matrix **MM**.
+
+The inline **Tl** function together with the **hh** function define the piecewise kinect operator. The sum over all the cosines is given by the **HH** matrix. As in the case of the index matrix, the **HH** can be resused if the number of points of the grid doesn't change.
+
 
     
 
