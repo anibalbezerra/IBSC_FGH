@@ -54,7 +54,13 @@ Since the solar cell is defined by the semiconductors that form it, the next cel
 The potential profile is defined using the numpy's **argwhere** function. Since the grid is centered around the origin, the absolute value of the quantum well's width is enough to define the whole quantum well. We define the valence and conduction band potential profiles separately by the arrays **VBV** and **VBC**.
 
     
+*6) Defining electric field Stark Effect.*
 
+The doped layers define an intrinsic electric field that bends the intrinsec layer due to the so called Stark Effect. Such a bend is responsible for the drift dynamics of the carriers. To mimic such effect we employied an constant electric field and summed its contributions to the potential profile.
 
+*7) Diagonalization.*
 
+After properly defining the potential profile, we add it to the diagonal of the Hamiltonian matrix and perform the diagonalization. Such a procedure is done separately for the valence and conduction bands. Since the valence band have an inverted profile in comparison to the conduction one, the code interpret it as a barrier instead of a quantum well. To solve it we changed its signal and added the quantum well band gap. After performing the diagonalization we revert the changes.
+
+The diaginalization is done using the linear algebra library of numpy, by means of the function *linalg.eig*. It returns both the eigenvalues and the eiganvectors.
 
