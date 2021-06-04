@@ -6,7 +6,16 @@ The algorithm was written using Python3 and presented within the file "Intermedi
 The code is divided in some parts, that are discribed next.
 
 1) Importing required libraries.
-2) Defining system ’ s properties
-3) 
+2) Defining system ’ s properties.
+3) Defining useful functions and matrices.
+4) Semiconductor properties.
+5) Defining the square well potential.
+6) Defining electric field Stark Effect.
+7) Diagonalization.
+8) Evaluating Absorption.
+9) Black body radiation for Sunlight.
+10) Ploting results.
+
+
 
 
