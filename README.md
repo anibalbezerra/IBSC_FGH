@@ -40,19 +40,18 @@ To evaluate the absorption the energy grid was also discretized and has a total 
 
 The evaluation of the oscillator strength, used with the absorption, requires a Heaviside step function. Such a function is defined inline as **Heaviside**, using the *lambda* syntax. 
 
-To define the kinetic energy operator we need a matrix of indexes to be used with the cosine function. Such a matrix depends only of the number of point in the grid and can be reused for several potentials, if the grid doesn't change. Two inline neested for loops are used to construct the indexes matrix **MM**.
+To define the kinetic energy operator we need a matrix of indexes to be used with the cosine function. Such a matrix depends only on the number of points in the grid and can be reused for several potentials if the grid doesn't change. Two inline nested for loops are used to construct the indexes matrix **MM**.
 
-The inline **Tl** function together with the **hh** function define the piecewise kinect operator. The sum over all the cosines is given by the **HH** matrix. As in the case of the index matrix, the **HH** can be resused if the number of points of the grid doesn't change.
+The inline **Tl** function together with the **hh** function defines the piecewise Kinect operator. The sum over all the cosines is given by the **HH** matrix. As in the case of the index matrix, the **HH** can be reused if the number of points of the grid doesn't change.
 
 
 *4) Semiconductor properties.*
 
-Since the solar cell is defined by the semiconductors that form it, the next cell defines the semiconductros properties. We used the juntion of AlGaAs and GaInAs as the hosts, but they can be exchanged to explore other regions of response for the cell. The quantum well itself is comprised by the GaInAs layer, surrounded by the AlGaAs layer. The quantum well height is defined by the bad gap discontinuity amongst the semiconductors. The band gap of the AgGaAs layer is controlled by the aluminum concentration, defined by the variable **cy**, while the band gap of the GaInAs is controlled by the indium concentration give by the variable **cx**.
+Since the solar cell is defined by the semiconductors that form it, the next cell defines the properties of the semiconductors. We used the junction of AlGaAs and GaInAs as the hosts, but they can be exchanged to explore other regions of response for the cell. The quantum well itself is comprised of the GaInAs layer, surrounded by the AlGaAs layer. The quantum well height is defined by the bandgap discontinuity amongst the semiconductors. The bandgap of the AgGaAs layer is controlled by the aluminum concentration, defined by the variable **cy**, while the bandgap of the GaInAs is controlled by the indium concentration given by the variable **cx**.
 
 *5) Defining the square well potential.*
 
-The potential profile is defined using the numpy's **argwhere** function. Since the grid is centered around the origin, the absolute value of the quantum well's width is enought to define the whole quantum well. We define the valence and conduction bands potential profiles separately by the arrays **VBV** and **VBC**.
-
+The potential profile is defined using the numpy's **argwhere** function. Since the grid is centered around the origin, the absolute value of the quantum well's width is enough to define the whole quantum well. We define the valence and conduction band potential profiles separately by the arrays **VBV** and **VBC**.
 
     
 
